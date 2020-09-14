@@ -1,7 +1,7 @@
 {
   "name": "re-conf-stsorgsync",
   "version": "0.1.0",
-  "description": "Configuration objects for an STS OrgSync integration",
+  "description": "Configuration objects for an STSOrgSync integration",
   "main": "index.js",
   "scripts": {
     "build": "build-objects",
