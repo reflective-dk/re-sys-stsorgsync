@@ -10,10 +10,12 @@ registrations:
           userStartable: false
           chain: stsorgsync
           category: Integration
+          configuration:
+            class:
+              id: 8e80de8b-4c8c-42ca-8ddd-cec816a955fa
+              name: Process Configuration
           deploy:
             - host: home.reflective.dk
-          system:
-            id: 9374800d-1ba6-5a9e-ae4a-d6da16e7e9df
           bpmn: { hash: stsorgsync-prod.bpmn }
         from: 2018-11-01T00:00:00.000Z
 ...
