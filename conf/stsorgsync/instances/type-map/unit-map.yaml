@@ -1,0 +1,44 @@
+---
+id: 21eb3880-959c-4a2c-806f-fe72170aa179
+registrations:
+  - validity:
+      - input:
+          class: { id: efefe41d-805b-478f-8e4d-841085cb7dfa, name: Type Map }
+          name: Unit -> STSOrgSync (Administrativ)
+          sourceType: { id: 5cad9972-6560-4136-a9d5-40c2d109be9b, name: Unit }
+          targetType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+          hierarchy: { id: fafdf6d2-bb21-4922-a514-64d71e33565f, name: STSOrgSync base }
+          idSeed: id
+          transform: join
+          warmUps:
+            units: { relatesTo: { class: 5cad9972-6560-4136-a9d5-40c2d109be9b } }
+          mappings:
+            uuid:
+              sourceAttribute: id
+              targetAttribute: Uuid
+            name:
+              sourceAttribute: name
+              targetAttribute: name
+            parentOrgUnitUuid:
+              sourceAttribute: parents.administrativ.id
+              targetAttribute: ParentOrgUnitUuid
+            parent:
+              sourceAttribute: parents.administrativ.id
+              targetAttribute: parents.stsorgsync
+              transform:
+                type: relation
+                target: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+            type:
+              sourceAttribute: name
+              targetAttribute: Type
+              transform:
+                type: constant
+                value: DEPARTMENT
+            activeFrom:
+              sourceAttribute: activeFrom
+              targetAttribute: activeFrom
+            activeTo:
+              sourceAttribute: activeTo
+              targetAttribute: activeTo
+        from: 2018-11-01T00:00:00.000Z
+...

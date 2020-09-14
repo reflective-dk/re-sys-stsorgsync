@@ -1,0 +1,19 @@
+---
+  id: 75885dc4-e638-46b0-88ab-576f1d1ac5c9
+  registrations:
+    - validity:
+        - input:
+            class:
+              id: efec2048-b4f3-4ffd-a7ba-b6698d412bbc
+              name: Process
+            name: STSOrgSync test
+            userStartable: false
+            chain: stsorgsync
+            category: Integration
+            deploy:
+              - host: test.reflective.dk
+            system:
+              id: 9374800d-1ba6-5a9e-ae4a-d6da16e7e9df
+            bpmn: { hash: stsorgsync-test.bpmn }
+          from: 2018-11-01T00:00:00.000Z
+...

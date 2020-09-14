@@ -1,0 +1,69 @@
+---
+id: 0f8963f4-6f49-4726-9367-01ae8b1161a3
+registrations:
+  - validity:
+      - input:
+          class: { id: efefe41d-805b-478f-8e4d-841085cb7dfa, name: Type Map }
+          name: User Account -> STSOrgSync User
+          sourceType: { id: 38df45c2-f4e2-4ffd-b91f-bc509ce8bcbf, name: User Account }
+          targetType: { id: 7ec87b30-4818-4705-a103-3de63b5cc16b, name: STSOrgSync User }
+          query: { relatesTo: { class: 38df45c2-f4e2-4ffd-b91f-bc509ce8bcbf } }
+          idSeed: id
+          transform: join
+          warmUps:
+            users: { relatesTo: { class: 38df45c2-f4e2-4ffd-b91f-bc509ce8bcbf } }
+            employments: { relatesTo: { class: 06c495eb-fcef-4c09-996f-63fd2dfea427 } }
+            persons: { relatesTo: { class: 66d33a37-f73c-4723-8dca-5feb9cf420e4 } }
+          condition:
+            - type: mustExist
+              attribute: employments.opus
+            - type: mustExist
+              attribute: foreignIds.ad
+          mappings:
+            uuid:
+              sourceAttribute: foreignIds.ad
+              targetAttribute: Uuid
+            userId:
+              sourceAttribute: username
+              targetAttribute: UserId
+            disabled:
+              sourceAttribute: disabled
+              targetAttribute: disabled
+            email:
+              sourceAttribute: username
+              targetAttribute: Email
+            personName:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, employee, name]
+              targetAttribute: Person.Name
+            positionName:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, position, name]
+              targetAttribute: Positions.0.Name
+            positionUnitUuid:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, employedAt.id]
+              targetAttribute: Positions.0.OrgUnitUuid
+            orgUnit:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, employedAt.id]
+              targetAttribute: orgUnit
+              transform:
+                type: relation
+                target: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+            activeFrom:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, activeFrom]
+              targetAttribute: activeFrom
+            activeTo:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, activeTo]
+              targetAttribute: activeTo
+        from: 2018-11-01T00:00:00.000Z
+...

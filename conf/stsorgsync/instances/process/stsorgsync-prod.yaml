@@ -1,0 +1,19 @@
+---
+id: 882247a3-ee84-4b39-bf99-05fecd0e9af0
+registrations:
+  - validity:
+      - input:
+          class:
+            id: efec2048-b4f3-4ffd-a7ba-b6698d412bbc
+            name: Process
+          name: STSOrgSync Prod
+          userStartable: false
+          chain: stsorgsync
+          category: Integration
+          deploy:
+            - host: home.reflective.dk
+          system:
+            id: 9374800d-1ba6-5a9e-ae4a-d6da16e7e9df
+          bpmn: { hash: stsorgsync-prod.bpmn }
+        from: 2018-11-01T00:00:00.000Z
+...
