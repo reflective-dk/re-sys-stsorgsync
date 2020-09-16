@@ -7,7 +7,6 @@ registrations:
           name: Unit -> STSOrgSync (Administrativ)
           sourceType: { id: 5cad9972-6560-4136-a9d5-40c2d109be9b, name: Unit }
           targetType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
-          hierarchy: { id: fafdf6d2-bb21-4922-a514-64d71e33565f, name: STSOrgSync base }
           idSeed: id
           transform: join
           warmUps:
