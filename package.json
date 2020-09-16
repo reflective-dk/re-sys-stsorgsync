@@ -11,7 +11,7 @@
     "postdeploy": "npm run validate",
     "upload": "upload-data",
     "validate": "validate-objects",
-    "test": "mocha --recursive",
+    "test": "bpmn-test",
     "docs": "build-documents",
     "clobber": "rm -rf node_modules; rm -f package-lock.json",
     "dev": "http-server -g -c-1 -p 8081"
