@@ -15,6 +15,7 @@ registrations:
               id: 8e80de8b-4c8c-42ca-8ddd-cec816a955fa
               name: Process Configuration
           deploy:
+            - host: integration-test.reflective.dk
             - host: test.reflective.dk
           bpmn: { hash: stsorgsync-test.bpmn }
         from: 2018-11-01T00:00:00.000Z
