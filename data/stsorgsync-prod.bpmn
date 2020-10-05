@@ -100,6 +100,11 @@
       <bpmn:incoming>SequenceFlow_0dz49gk</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:startEvent id="initial" name="STSOrgSync Prod initiated">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="start">
+          <camunda:script scriptFormat="Javascript"><![CDATA[execution.setVariable("chain", "stsorgsync");]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
       <bpmn:outgoing>SequenceFlow_127wjkd</bpmn:outgoing>
       <bpmn:timerEventDefinition>
         <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">0 0 2 * * ?</bpmn:timeCycle>
