@@ -1,0 +1,17 @@
+id: R882247a3-ee84-4b39-bf99-05fecd0e9af0
+name: STSOrgSync Prod
+lanes: []
+userTasks:
+  reviewFailure: Review failure
+serviceTasks:
+  dropExtension: Drop extension
+  inactivate: Inactivate unused objects
+  mergeExtractionDelta: Merge extraction delta
+  unstage: Unstage to STSOrgSync Prod
+  drop: Drop Incoming changes
+  extract: Extract STSOrgSync data
+invalidElements: []
+flowNodeRefs:
+  referencedInSingleLane: []
+  referencedInMultipleLanes: []
+  invalidReferences: []

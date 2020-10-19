@@ -1,0 +1,17 @@
+id: R75885dc4-e638-46b0-88ab-576f1d1ac5c9
+name: STSOrgSync Test
+lanes: []
+userTasks:
+  reviewFailure: Review failure
+serviceTasks:
+  dropExtension: Drop extension
+  inactivate: Inactivate unused objects
+  mergeExtractionDelta: Merge extraction delta
+  unstage: Unstage to STSOrgSync Prod
+  drop: Drop Incoming changes
+  extract: Extract STSOrgSync data
+invalidElements: []
+flowNodeRefs:
+  referencedInSingleLane: []
+  referencedInMultipleLanes: []
+  invalidReferences: []
