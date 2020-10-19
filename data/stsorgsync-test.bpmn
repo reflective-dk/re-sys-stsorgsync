@@ -103,7 +103,7 @@
       <bpmn:incoming>SequenceFlow_127wjkd</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0z037qb</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:startEvent id="initial" name="STSOrgSync Prod initiated">
+    <bpmn:startEvent id="initial" name="STSOrgSync Test initiated">
       <bpmn:extensionElements>
         <camunda:executionListener event="start">
           <camunda:script scriptFormat="Javascript"><![CDATA[execution.setVariable("chain", "stsorgsync");]]></camunda:script>
@@ -293,7 +293,7 @@
       <bpmndi:BPMNShape id="StartEvent_0w1anmh_di" bpmnElement="initial">
         <dc:Bounds x="209" y="271" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="196" y="320" width="65" height="27" />
+          <dc:Bounds x="185" y="320" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
