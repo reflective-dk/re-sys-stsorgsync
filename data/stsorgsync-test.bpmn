@@ -3,7 +3,7 @@
   <bpmn:collaboration id="Collaboration_11d6hwn">
     <bpmn:participant id="Participant_1cmscbv" name="Administrator" processRef="R75885dc4-e638-46b0-88ab-576f1d1ac5c9" />
   </bpmn:collaboration>
-  <bpmn:process id="R75885dc4-e638-46b0-88ab-576f1d1ac5c9" name="STSOrgSync Prod" isExecutable="true" camunda:versionTag="1.0" camunda:taskPriority="1">
+  <bpmn:process id="R75885dc4-e638-46b0-88ab-576f1d1ac5c9" name="STSOrgSync Test" isExecutable="true" camunda:versionTag="1.0" camunda:taskPriority="1">
     <bpmn:serviceTask id="dropExtension" name="Drop extension" camunda:type="external" camunda:topic="drop">
       <bpmn:incoming>SequenceFlow_1leub0e</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_12ypfuo</bpmn:outgoing>
@@ -31,7 +31,7 @@
       <bpmn:incoming>SequenceFlow_0b9wdau</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0589jnf</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="unstage" name="Unstage to STSOrgSync Prod" camunda:type="external" camunda:topic="unstage">
+    <bpmn:serviceTask id="unstage" name="Unstage to STSOrgSync Test" camunda:type="external" camunda:topic="unstage">
       <bpmn:incoming>SequenceFlow_00n2j51</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0rvf19n</bpmn:outgoing>
     </bpmn:serviceTask>
