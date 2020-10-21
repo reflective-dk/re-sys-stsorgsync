@@ -19,6 +19,9 @@ registrations:
               attribute: employments.opus
             - type: mustExist
               attribute: foreignIds.ad
+            - type: mustNotEqual
+              attribute: disabled
+              value: true
           mappings:
             uuid:
               sourceAttribute: foreignIds.ad
