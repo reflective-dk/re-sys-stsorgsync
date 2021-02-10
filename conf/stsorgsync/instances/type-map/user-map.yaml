@@ -9,7 +9,6 @@ registrations:
           targetType: { id: 7ec87b30-4818-4705-a103-3de63b5cc16b, name: STSOrgSync User }
           query: { relatesTo: { class: 38df45c2-f4e2-4ffd-b91f-bc509ce8bcbf } }
           idSeed: id
-          transform: join
           warmUps:
             users: { relatesTo: { class: 38df45c2-f4e2-4ffd-b91f-bc509ce8bcbf } }
             employments: { relatesTo: { class: 06c495eb-fcef-4c09-996f-63fd2dfea427 } }
