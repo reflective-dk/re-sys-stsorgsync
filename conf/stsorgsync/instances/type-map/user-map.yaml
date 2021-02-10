@@ -22,7 +22,23 @@ registrations:
             - type: mustNotEqual
               attribute: disabled
               value: true
+            - type: mustNotProduceValue
+              mapping: excludeFromStsOrg
           mappings:
+            excludeFromStsOrg:
+              sourceAttribute:
+                - type: path
+                  path: [ employments.opus, employedAt ]
+                  composable: true
+                - type: findAncestor
+                  selfIfNotFound: false
+                  parentRelation: parents.administrativ
+                  condition:
+                    type: mustBeTruthy
+                    attribute: aggregateSubTree.stsOrg
+                - type: path
+                  path: [ foreignIds.orgUnitId ]
+              targetAttribute: excludeFromStsOrg
             uuid:
               sourceAttribute: foreignIds.ad
               targetAttribute: Uuid
