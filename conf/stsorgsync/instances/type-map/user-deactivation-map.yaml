@@ -28,19 +28,13 @@ registrations:
                 - type: path
                   path: [ foreignIds.orgUnitId ]
               targetAttribute: excludeFromStsOrg
-              transform:
-                type: boolean
-                true: true
-                false: false
+              transform: boolean
             hasEmployment:
               sourceAttribute:
                 type: path
                 path: [ employments.$ ]
               targetAttribute: hasEmployment
-              transform:
-                type: boolean
-                true: true
-                false: false
+              transform: boolean
             # This type map deals with each condition of the regular user type
             # map, one at a time
             activeTo:
