@@ -37,45 +37,46 @@ registrations:
               transform: boolean
             # This type map deals with each condition of the regular user type
             # map, one at a time
-            activeTo:
-              # Use activeTo of employment, if available
-              sourceAttribute:
-                type: path
-                path: [ employments.opus, activeTo ]
-              targetAttribute: activeTo
             activeTo1:
+              # Use the existing activeTo, if available
+              sourceAttribute: activeTo
+              targetAttribute: activeTo
+              condition:
+                type: mustExist
+                attribute: activeTo
+            activeTo2:
               # If the user has no employment - deactivate
               sourceAttribute: id
               targetAttribute: activeTo
               condition:
-                - type: mustNotProduceValue
-                  mapping: activeTo
+                - type: mustNotExist
+                  attribute: activeTo
                 - type: mustNotProduceValue
                   mapping: hasEmployment
               transform:
                 type: constant
                 # This value is in the past and is easy to recognize
                 value: '1955-12-31T23:59:59.999Z'
-            activeTo2:
+            activeTo3:
               # If the user has no AD foreign id - deactivate
               sourceAttribute: id
               targetAttribute: activeTo
               condition:
-                - type: mustNotProduceValue
-                  mapping: activeTo
+                - type: mustNotExist
+                  attribute: activeTo
                 - type: mustNotExist
                   attribute: foreignIds.ad
               transform:
                 type: constant
                 # This value is in the past and is easy to recognize
                 value: '1955-12-31T23:59:59.999Z'
-            activeTo3:
+            activeTo4:
               # If the user is 'disabled' - deactivate
               sourceAttribute: id
               targetAttribute: activeTo
               condition:
-                - type: mustNotProduceValue
-                  mapping: activeTo
+                - type: mustNotExist
+                  attribute: activeTo
                 - type: mustEqual
                   attribute: disabled
                   value: true
@@ -83,13 +84,13 @@ registrations:
                 type: constant
                 # This value is in the past and is easy to recognize
                 value: '1955-12-31T23:59:59.999Z'
-            activeTo4:
+            activeTo5:
               # If the associated unit is excluded from STS - deactivate
               sourceAttribute: id
               targetAttribute: activeTo
               condition:
-                - type: mustNotProduceValue
-                  mapping: activeTo
+                - type: mustNotExist
+                  attribute: activeTo
                 - type: mustProduceValue
                   mapping: excludeFromStsOrg
               transform:
