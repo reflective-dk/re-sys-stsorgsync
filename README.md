@@ -10,8 +10,8 @@ Follow these steps to get the code and check that the basic functionality is
 working.
 
 ```
-git clone git@github.com:reflective-dk/re-conf-stsorgsync.git
-cd re-conf-stsorgsync
+git clone git@github.com:reflective-dk/re-sys-stsorgsync.git
+cd re-sys-stsorgsync
 npm install
 npm run build
 ```

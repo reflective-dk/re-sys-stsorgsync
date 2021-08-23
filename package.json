@@ -1,5 +1,5 @@
 {
-  "name": "re-conf-stsorgsync",
+  "name": "re-sys-stsorgsync",
   "version": "0.1.0",
   "description": "Configuration objects for an STSOrgSync integration",
   "main": "index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/reflective-dk/re-conf-stsorgsync.git"
+    "url": "git://github.com/reflective-dk/re-sys-stsorgsync.git"
   },
   "keywords": [
     "reflective",

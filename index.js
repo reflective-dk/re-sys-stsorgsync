@@ -10,4 +10,4 @@ var docsLoc = path.join(rootLoc, 'docs');
 
 var confUtil = require('re-conf-util');
 
-module.exports = confUtil.prepareConf(confLoc, dataLoc, 'conf-stsorgsync', [ models ], miscLoc, docsLoc);
+module.exports = confUtil.prepareConf(confLoc, dataLoc, 'sys-stsorgsync', [ models ], miscLoc, docsLoc);
