@@ -1,0 +1,9 @@
+---
+id: 7c3f9da3-3814-4fd3-94db-eba3e951e061
+registrations:
+  - validity:
+      - input:
+          class: { id: 5fa95ccd-a801-4cbb-9400-e7e1ee7cee44, name: Organization }
+          name: STSOrgSync Organisation
+        from: 2018-01-01T00:00:00.000Z
+...

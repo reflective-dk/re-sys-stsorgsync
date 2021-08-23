@@ -1,0 +1,27 @@
+---
+id: 6efd212b-9ec2-48d6-957f-1fb7b06bad8e
+registrations:
+  - validity:
+      - input:
+          class: { id: a07908c1-883f-41e6-9beb-02981f48b067, name: Hierarchy }
+          name: STSOrgSync Hierarchy
+          owner: { id: 7c3f9da3-3814-4fd3-94db-eba3e951e061, name: STSOrgSync Organisation }
+          rootQuery:
+            query:
+              relatesTo:
+                class: 5c71d76c-9c97-4365-ade6-4bb0add4546f
+          rootFilter:
+            'parents.stsorgsync': 'null'
+          projection:
+            activeFrom: true
+            activeTo: true
+          pathElements:
+            0:
+              parentType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+              childType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+              relation: parents.stsorgsync
+          primaryType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+          relatedTypes:
+            user: { id: 7ec87b30-4818-4705-a103-3de63b5cc16b, name: STSOrgSync User }
+        from: 2018-01-01T00:00:00.000Z
+...
