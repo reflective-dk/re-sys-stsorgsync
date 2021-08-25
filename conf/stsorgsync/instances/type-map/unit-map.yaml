@@ -40,6 +40,25 @@ registrations:
               transform:
                 type: relation
                 target: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+            tasks:
+              sourceAttribute: id
+              targetAttribute: Tasks
+              transform:
+                - type: lookup
+                  lookupRelation: entity
+                  # only get tasks for profile for KLE Emneplan Ansvarsområde
+                  query:
+                    relatesTo:
+                      class: 8b0390d1-74b9-48a2-a4cf-406e934ea120
+                      profile: 624bb3a3-77a4-4a7c-8bab-c5981ad34a17
+                  composable: true
+                - type: descend
+                  attribute: 'auxiliary.364ae336-9dbe-43c3-95af-aec23c54d358'
+            post:
+              sourceAttribute:
+                type: path
+                path: [ locations.$, address, streetAddress ]
+              targetAttribute: Post
             type:
               sourceAttribute: name
               targetAttribute: Type
