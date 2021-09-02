@@ -65,6 +65,11 @@ registrations:
                 type: path
                 path: [ employments.opus, employedAt.id]
               targetAttribute: Positions.0.OrgUnitUuid
+            phoneNumber:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, phoneNumbers.extension]
+              targetAttribute: PhoneNumber
             orgUnit:
               sourceAttribute:
                 type: path
