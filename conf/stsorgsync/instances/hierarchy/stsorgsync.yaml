@@ -4,8 +4,8 @@ registrations:
   - validity:
       - input:
           class: { id: a07908c1-883f-41e6-9beb-02981f48b067, name: Hierarchy }
-          name: STSOrgSync Organisation
-          owner: { id: 7c3f9da3-3814-4fd3-94db-eba3e951e061, name: STSOrgSync Organisation }
+          name: FK Organisation
+          owner: { id: 7c3f9da3-3814-4fd3-94db-eba3e951e061, name: FK Organisation }
           rootQuery:
             query:
               relatesTo:
