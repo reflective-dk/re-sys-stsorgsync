@@ -25,6 +25,9 @@ registrations:
                 - type: path
                   path: [ name ]
               targetAttribute: excludeFromStsOrg
+            hierarchicalRoots:
+              sourceAttribute: hierarchicalRoots.administrativ
+              targetAttribute: hierarchicalRoots.administrativ
             uuid:
               sourceAttribute: id
               targetAttribute: Uuid

@@ -10,11 +10,10 @@ registrations:
             query:
               relatesTo:
                 class: 5c71d76c-9c97-4365-ade6-4bb0add4546f
-          rootFilter:
-            'parents.stsorgsync': 'null'
-          projection:
-            activeFrom: true
-            activeTo: true
+              matches:
+                hierarchicalRoots:
+                  administrativ: 'true'
+          projection: false
           pathElements:
             0:
               parentType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
