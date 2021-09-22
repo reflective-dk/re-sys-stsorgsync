@@ -19,6 +19,8 @@ registrations:
               domain: hjertekoebing
             - host: test.reflective.dk
               domain: hjertekoebing
+            - host: home.reflective.dk
+              domain: hjertekoebing
           bpmn: { hash: stsorgsync-test.bpmn }
         from: 2018-11-01T00:00:00.000Z
 ...
