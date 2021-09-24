@@ -1,0 +1,12 @@
+---
+id: 7567bbe0-25da-4ccf-b431-de091d4f1869
+registrations:
+  - validity:
+      - input:
+          auxiliaryType: checkbox
+          class: { id: 1938d89b-a935-412d-a23c-02709fe63c0c, name: System Access }
+          name: FK Organisation App
+          category: application
+          system: { id: be7cbf0e-0f13-43a3-969b-e01f2762ebae, name: FK Organisation }
+        from: 2005-01-01T00:00:00.000Z
+...

@@ -1,0 +1,17 @@
+---
+id: 8ba82109-bce3-4bb0-a2d5-1d73e2f24c04
+registrations:
+  - validity:
+      - input:
+          class: { id: a882353e-8b1b-4649-a759-ccf95b9c1fe3, name: System Access Profile }
+          name: FK Organisation Grundprofil
+          description: Grundprofil med alle adgange
+          system: { id: be7cbf0e-0f13-43a3-969b-e01f2762ebae, name: FK Organisation }
+          category: system-access
+          published: false
+          accesses:
+            7567bbe0-25da-4ccf-b431-de091d4f1869:
+              id: 7567bbe0-25da-4ccf-b431-de091d4f1869
+              name: FK Organisation App
+        from: 2005-01-01T00:00:00.000Z
+...
