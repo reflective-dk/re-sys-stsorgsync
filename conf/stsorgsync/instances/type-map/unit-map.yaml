@@ -40,9 +40,15 @@ registrations:
             parentOrgUnitUuid:
               sourceAttribute: parents.administrativ.id
               targetAttribute: ParentOrgUnitUuid
+              condition:
+                type: mustNotBeTruthy
+                attribute: hierarchicalRoots.administrativ
             parent:
               sourceAttribute: parents.administrativ.id
               targetAttribute: parents.stsorgsync
+              condition:
+                type: mustNotBeTruthy
+                attribute: hierarchicalRoots.administrativ
               transform:
                 type: relation
                 target: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
