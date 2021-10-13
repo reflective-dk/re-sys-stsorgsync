@@ -55,7 +55,6 @@ registrations:
                       class: 8b0390d1-74b9-48a2-a4cf-406e934ea120
                       profile: 624bb3a3-77a4-4a7c-8bab-c5981ad34a17
                   composable: true
-                  filterActive: true
                 - type: descend
                   attribute: 'auxiliary.364ae336-9dbe-43c3-95af-aec23c54d358'
             post:
