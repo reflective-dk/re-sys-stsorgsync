@@ -7,6 +7,9 @@ registrations:
           name: Unit -> STSOrgSync Unit (Administrativ)
           sourceType: { id: 5cad9972-6560-4136-a9d5-40c2d109be9b, name: Unit }
           targetType: { id: 5c71d76c-9c97-4365-ade6-4bb0add4546f, name: STSOrgSync Unit }
+          hierarchy:
+            id: c1d37031-8e8b-4848-88aa-b9ce1d1da52f
+            name: Administrativ Organisation
           idSeed: id
           condition:
             type: mustNotProduceValue
