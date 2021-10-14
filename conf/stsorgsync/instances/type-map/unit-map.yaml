@@ -31,18 +31,35 @@ registrations:
             hierarchicalRoots:
               sourceAttribute: hierarchicalRoots.administrativ
               targetAttribute: hierarchicalRoots.administrativ
-            uuid:
+            uuidAlt1:
+              sourceAttribute: foreignIds.hardcodedStsUuid
+              targetAttribute: Uuid
+            uuidAlt2:
+              # Use the unit's own id as uuid for STS Organisation
               sourceAttribute: id
               targetAttribute: Uuid
+              condition:
+                type: mustNotExist
+                attribute: foreignIds.hardcodedStsUuid
             name:
               sourceAttribute: name
               targetAttribute: name
-            parentOrgUnitUuid:
-              sourceAttribute: parents.administrativ.id
+            parentOrgUnitUuidAlt1:
+              sourceAttribute:
+                type: path
+                path: [ parents.administrativ, foreignIds.hardcodedStsUuid ]
               targetAttribute: ParentOrgUnitUuid
               condition:
                 type: mustNotBeTruthy
                 attribute: hierarchicalRoots.administrativ
+            parentOrgUnitUuidAlt2:
+              sourceAttribute: parents.administrativ.id
+              targetAttribute: ParentOrgUnitUuid
+              condition:
+                - type: mustNotBeTruthy
+                  attribute: hierarchicalRoots.administrativ
+                - type: mustNotProduceValue
+                  mapping: parentOrgUnitUuidAlt1
             parent:
               sourceAttribute: parents.administrativ.id
               targetAttribute: parents.stsorgsync

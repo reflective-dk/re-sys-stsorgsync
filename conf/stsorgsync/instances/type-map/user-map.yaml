@@ -53,27 +53,35 @@ registrations:
             personName:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, employee, name]
+                path: [ employments.opus, employee, name ]
               targetAttribute: Person.Name
             positionName:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, position, name]
+                path: [ employments.opus, position, name ]
               targetAttribute: Positions.0.Name
-            positionUnitUuid:
+            positionUnitUuidAlt1:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, employedAt.id]
+                path: [ employments.opus, employedAt, foreignIds.hardcodedStsUuid ]
               targetAttribute: Positions.0.OrgUnitUuid
+            positionUnitUuidAlt2:
+              sourceAttribute:
+                type: path
+                path: [ employments.opus, employedAt.id ]
+              targetAttribute: Positions.0.OrgUnitUuid
+              condition:
+                type: mustNotProduceValue
+                mapping: positionUnitUuidAlt1
             phoneNumber:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, phoneNumbers.extension]
+                path: [ employments.opus, phoneNumbers.extension ]
               targetAttribute: PhoneNumber
             orgUnit:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, employedAt.id]
+                path: [ employments.opus, employedAt.id ]
               targetAttribute: orgUnit
               transform:
                 type: relation
@@ -81,12 +89,12 @@ registrations:
             activeFrom:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, activeFrom]
+                path: [ employments.opus, activeFrom ]
               targetAttribute: activeFrom
             activeTo:
               sourceAttribute:
                 type: path
-                path: [ employments.opus, activeTo]
+                path: [ employments.opus, activeTo ]
               targetAttribute: activeTo
         from: 2018-11-01T00:00:00.000Z
 ...
