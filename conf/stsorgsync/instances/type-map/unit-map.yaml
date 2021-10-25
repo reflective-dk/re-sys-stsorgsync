@@ -44,6 +44,15 @@ registrations:
             name:
               sourceAttribute: name
               targetAttribute: name
+            parentOrgUnitUuidAlt0:
+              sourceAttribute: id
+              targetAttribute: ParentOrgUnitUuid
+              condition:
+                type: mustBeTruthy
+                attribute: hierarchicalRoots.administrativ
+              transform:
+                type: constant
+                value: null
             parentOrgUnitUuidAlt1:
               sourceAttribute:
                 type: path
@@ -60,7 +69,16 @@ registrations:
                   attribute: hierarchicalRoots.administrativ
                 - type: mustNotProduceValue
                   mapping: parentOrgUnitUuidAlt1
-            parent:
+            parentAlt0:
+              sourceAttribute: id
+              targetAttribute: parents.stsorgsync
+              condition:
+                type: mustBeTruthy
+                attribute: hierarchicalRoots.administrativ
+              transform:
+                type: constant
+                value: null
+            parentAlt1:
               sourceAttribute: parents.administrativ.id
               targetAttribute: parents.stsorgsync
               condition:
