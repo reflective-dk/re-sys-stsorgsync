@@ -103,9 +103,16 @@ registrations:
                   attribute: 'auxiliary.364ae336-9dbe-43c3-95af-aec23c54d358'
             post:
               sourceAttribute:
-                type: path
-                path: [ locations.$, address, streetAddress ]
+                - type: path
+                  path: [ locations.$, address, streetAddress ]
+                - type: path
+                  path: [ locations.$, address, postalCode ]
+                - type: path
+                  path: [ locations.$, address, city ]
               targetAttribute: Post
+              transform:
+                type: join
+                separator: ', '
             type:
               sourceAttribute: name
               targetAttribute: Type
