@@ -16,6 +16,12 @@ registrations:
               name: Process Configuration
           deploy:
             - host: home.reflective.dk
+              domains:
+                - albertslund
+                - herlev
+                - htk
+                - thisted
+                - vallensbaek
           bpmn: { hash: stsorgsync-prod.bpmn }
         from: 2018-11-01T00:00:00.000Z
 ...

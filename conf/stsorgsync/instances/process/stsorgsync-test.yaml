@@ -16,11 +16,14 @@ registrations:
               name: Process Configuration
           deploy:
             - host: integration-test.reflective.dk
-              domain: hjertekoebing
+              domains:
+                - hjertekoebing
             - host: test.reflective.dk
-              domain: hjertekoebing
+              domains:
+                - hjertekoebing
             - host: home.reflective.dk
-              domain: hjertekoebing
+              domains:
+                - hjertekoebing
           bpmn: { hash: stsorgsync-test.bpmn }
         from: 2018-11-01T00:00:00.000Z
 ...
