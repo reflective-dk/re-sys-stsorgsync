@@ -108,9 +108,11 @@ registrations:
                 composable: true
               targetAttribute: Post
               transform:
-                type: joinAttributes
-                attributes: [ 'streetAddress', 'postalCode', 'city' ]
-                separator: ', '
+                - type: descend
+                  attribute: snapshot
+                - type: joinAttributes
+                  attributes: [ 'streetAddress', 'postalCode', 'city' ]
+                  separator: ', '
             type:
               sourceAttribute: name
               targetAttribute: Type
