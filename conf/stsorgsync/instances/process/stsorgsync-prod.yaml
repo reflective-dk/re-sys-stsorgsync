@@ -19,7 +19,7 @@ registrations:
               domains:
                 - albertslund
                 - herlev
-                - htk
+                # - htk
                 - thisted
                 - vallensbaek
           bpmn: { hash: stsorgsync-prod.bpmn }
