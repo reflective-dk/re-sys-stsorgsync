@@ -44,6 +44,9 @@ registrations:
             name:
               sourceAttribute: name
               targetAttribute: name
+            ean:
+              sourceAttribute: ean.generic
+              targetAttribute: Ean
             parentOrgUnitUuidAlt0:
               sourceAttribute: id
               targetAttribute: ParentOrgUnitUuid
