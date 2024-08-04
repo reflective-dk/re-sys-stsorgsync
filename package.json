@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "build-objects",
+    "bpmn-doctor": "bpmn-doctor",
     "clean": "rm -Rf ./build",
     "predeploy": "npm run upload",
     "deploy": "re add -j build/objects.json",

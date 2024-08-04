@@ -4,12 +4,13 @@ lanes: []
 userTasks:
   reviewFailure: Review failure
 serviceTasks:
+  Task_0x0mecl: Load configuration
   dropExtension: Drop extension
-  inactivate: Inactivate unused objects
-  mergeExtractionDelta: Merge extraction delta
-  unstage: Unstage to STSOrgSync Prod
   drop: Drop Incoming changes
   extract: Extract STSOrgSync data
+  inactivate: Inactivate unused objects
+  mergeExtractionDelta: Merge extraction delta
+  unstage: Unstage to STSOrgSync Test
 invalidElements: []
 flowNodeRefs:
   referencedInSingleLane: []

@@ -4,12 +4,14 @@ lanes: []
 userTasks:
   reviewFailure: Review failure
 serviceTasks:
+  Task_0x0mecl: Load configuration
+  Activity_1xmpgr8: Start check OS2Sync
   dropExtension: Drop extension
+  drop: Drop Incoming changes
+  extract: Extract STSOrgSync data
   inactivate: Inactivate unused objects
   mergeExtractionDelta: Merge extraction delta
   unstage: Unstage to STSOrgSync Prod
-  drop: Drop Incoming changes
-  extract: Extract STSOrgSync data
 invalidElements: []
 flowNodeRefs:
   referencedInSingleLane: []
